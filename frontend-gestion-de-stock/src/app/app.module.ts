@@ -14,6 +14,21 @@ import { ListArticleComponent } from './article/list-article/list-article.compon
 import { AddFourComponent } from './fournisseur/add-four/add-four.component';
 import { ListFourComponent } from './fournisseur/list-four/list-four.component';
 
+import {ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import { MatDialogModule,MatDialogRef, } from '@angular/material/dialog';
+// import { MatSliderModule } from '@angular/material/slider';
+// import { FlexLayoutModule } from '@angular/flex-layout';
+// import { MatToolbarModule } from '@angular/material/toolbar';
+// import { MatIconModule } from '@angular/material/icon';
+// import { NgMatSearchBarModule } from 'ng-mat-search-bar';
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+// const MATERIAL_MODULES = [MatToolbarModule,
+//   MatIconModule
+// ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,9 +45,26 @@ import { ListFourComponent } from './fournisseur/list-four/list-four.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    // MatDialogModule,
+    // MatDialogRef,
+    // MatSliderModule,
+    // FlexLayoutModule,
+    // MatToolbarModule,
+    // MatIconModule,
+    // NgMatSearchBarModule,
+    // NgbModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
+
+    
   ],
+  // exports : MATERIAL_MODULES,
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // entryComponents: [AddCategorieComponent]
 })
 export class AppModule { }
